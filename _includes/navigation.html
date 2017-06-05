@@ -7,30 +7,68 @@
     nav ul {
         margin: 0;
         padding-right: 10px;
-        text-align: right;
-        padding-top: 15px;
+        text-align: left;
+        padding-top: 20px;
     }
     
     nav ul>li {
         display: inline;
         Padding: 8px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: #ffffff;
     }
     
     nav {
-        background-color: #3c8fd6;
-        height: 50px;
+        z-index: 1;
+        position: fixed;
+        height: 80px;
+    }
+    
+    img {
+        padding-top -10px;
+        padding: 0;
+        margin: 0;
+        float: right;
+        height: 75px;
+        position: relative;
+    }
+    
+    .logo {
+        position: fixed;
+        width: 100%;
+        margin-top: -20px;
+        height: 75px;
+        background-color: #1980c5;
+        margin-bottom: 10px;
+        border-bottom: 2px #000000;
+    }
+    /* unvisited link */
+    
+    a:link {
+        color: #ffffff;
+        text-decoration: none;
+    }
+    /* visited link */
+    
+    a:visited {
+        color: #ffffff;
     }
 </style>
 
 
 
 <nav>
-    <ul>
-        <li>
-            <a href="{{ site.github.url }}/">Home</a>
-        </li>
-        <li>
-            <a href="{{ site.github.url }}/blog.html">Blog</a>
-        </li>
-    </ul>
+    <div class="logo">
+        <img src="{{ site.github.url }}/images/Banner.png" alt="Blue banner"></img>
+
+        <ul>
+            <li>
+                <a href="{{ site.github.url }} /">Home</a>
+            </li>
+            <li>
+                <a href="{{ site.github.url }} /blog.html">Blog</a>
+            </li>
+        </ul>
+    </div>
 </nav>
